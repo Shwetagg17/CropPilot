@@ -1,0 +1,28 @@
+{
+  "Rice": {"protein": "7g","carbs": "80g","fats": "0.6g","N": "80-120","P": "40-60","K": "40-60","usage": ["Staple food","Rice bran oil","Alcohol production","Animal feed","Paper industry"]},
+  "Maize": {"protein": "9g","carbs": "74g","fats": "4.7g","N": "90-120","P": "40-60","K": "40-50","usage": ["Food industry","Corn oil","Biofuel","Animal feed","Starch industry"]},
+  "Jute": {"protein": "0g","carbs": "0g","fats": "0g","N": "80-100","P": "40-50","K": "40-60","usage": ["Textile fiber","Rope production","Packaging","Carpet industry","Paper pulp"]},
+  "Cotton": {"protein": "0g","carbs": "0g","fats": "0g","N": "120-160","P": "60-80","K": "60-80","usage": ["Textile industry","Cottonseed oil","Medical products","Paper industry","Animal feed"]},
+  "Coconut": {"protein": "3g","carbs": "15g","fats": "33g","N": "80-100","P": "30-50","K": "100-120","usage": ["Food products","Oil extraction","Cosmetics","Coir industry","Beverages"]},
+
+  "Papaya": {"protein": "0.5g","carbs": "11g","fats": "0.3g","N": "50-80","P": "30-50","K": "40-60","usage": ["Fresh fruit","Juices","Medicinal use","Cosmetics","Enzyme extraction"]},
+  "Orange": {"protein": "1g","carbs": "12g","fats": "0.2g","N": "60-100","P": "40-60","K": "60-80","usage": ["Juice industry","Fresh fruit","Flavoring","Vitamin supplements","Cosmetics"]},
+  "Apple": {"protein": "0.3g","carbs": "14g","fats": "0.2g","N": "50-80","P": "30-50","K": "40-60","usage": ["Fresh fruit","Juice","Cider production","Desserts","Processed food"]},
+  "Muskmelon": {"protein": "0.8g","carbs": "8g","fats": "0.2g","N": "40-60","P": "30-40","K": "40-60","usage": ["Fresh fruit","Juice","Desserts","Salads","Hydration food"]},
+  "Watermelon": {"protein": "0.6g","carbs": "8g","fats": "0.2g","N": "40-60","P": "30-40","K": "40-60","usage": ["Fresh fruit","Juices","Desserts","Hydration","Salads"]},
+
+  "Grapes": {"protein": "0.6g","carbs": "18g","fats": "0.2g","N": "60-90","P": "40-60","K": "60-80","usage": ["Wine industry","Juice","Fresh fruit","Raisin production","Flavoring"]},
+  "Mango": {"protein": "0.8g","carbs": "15g","fats": "0.4g","N": "60-100","P": "40-60","K": "60-80","usage": ["Fresh fruit","Juice","Pickles","Desserts","Pulp industry"]},
+  "Banana": {"protein": "1.3g","carbs": "23g","fats": "0.3g","N": "80-120","P": "50-70","K": "100-150","usage": ["Fresh fruit","Baby food","Juices","Desserts","Export"]},
+  "Pomegranate": {"protein": "1.7g","carbs": "19g","fats": "1.2g","N": "60-90","P": "40-60","K": "60-80","usage": ["Juice","Fresh fruit","Medicinal","Cosmetics","Health supplements"]},
+
+  "Lentil": {"protein": "25g","carbs": "60g","fats": "1g","N": "40-60","P": "40-60","K": "20-40","usage": ["Pulse food","Protein source","Animal feed","Processed food","Diet food"]},
+  "Blackgram": {"protein": "25g","carbs": "58g","fats": "1.5g","N": "40-60","P": "40-60","K": "20-40","usage": ["Dal production","Protein food","Fermented food","Animal feed","Snacks"]},
+  "Mungbean": {"protein": "24g","carbs": "63g","fats": "1.2g","N": "40-60","P": "40-60","K": "20-40","usage": ["Sprouts","Dal","Protein food","Snacks","Health food"]},
+  "Mothbeans": {"protein": "23g","carbs": "61g","fats": "1.5g","N": "40-60","P": "40-60","K": "20-40","usage": ["Pulse food","Dryland farming","Animal feed","Snacks","Protein diet"]},
+  "Pigeonpeas": {"protein": "22g","carbs": "62g","fats": "1.7g","N": "40-60","P": "40-60","K": "20-40","usage": ["Dal","Protein food","Processed food","Animal feed","Export"]},
+  "Kidneybeans": {"protein": "24g","carbs": "60g","fats": "1g","N": "40-60","P": "40-60","K": "20-40","usage": ["Canned food","Protein diet","Salads","Processed food","Export"]},
+  "Chickpea": {"protein": "19g","carbs": "61g","fats": "6g","N": "40-60","P": "40-60","K": "20-40","usage": ["Flour (besan)","Protein food","Snacks","Processed food","Animal feed"]},
+
+  "Coffee": {"protein": "0g","carbs": "0g","fats": "0g","N": "80-120","P": "40-60","K": "40-60","usage": ["Beverage industry","Coffee powder","Export","Flavoring","Cosmetics"]}
+}

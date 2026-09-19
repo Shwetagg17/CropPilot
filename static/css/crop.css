@@ -1,0 +1,63 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f5f5f5;
+}
+.logo {
+  color: white;
+  text-decoration: none;
+  font-size: 22px;
+  font-weight: 600;
+}
+/* NAVBAR */
+.navbar {
+  background: #2e7d32;
+  color: white;
+  padding: 15px 30px;
+}
+
+
+/* CONTAINER */
+.container {
+  text-align: center;
+  padding: 40px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  width: 500px;
+  margin: auto;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* INPUT */
+input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* BUTTON */
+button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESULT */
+.result-box {
+  margin-top: 20px;
+  font-size: 18px;
+}

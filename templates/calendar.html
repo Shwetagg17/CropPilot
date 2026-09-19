@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crop Calendar | CropPilot</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/calendar.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+ <div class="navbar">
+  <a href="/" class="logo">🌱 CropPilot</a>
+  <a href="/">Home</a>
+</div>
+
+<section class="calendar-section">
+
+  <h2>Crop Calendar & Alerts</h2>
+  <p class="calendar-subtext">
+    Select your state and crop to get farming insights.
+  </p>
+
+  <div class="calendar-top">
+
+    <!-- INPUT CARD -->
+    <div class="card">
+      <h3>Select Crop</h3>
+
+      <label>State</label>
+      <select id="stateSelect">
+        <option value="">Select State</option>
+        <option>Punjab</option>
+        <option>Uttar Pradesh</option>
+        <option>Haryana</option>
+        <option>Maharashtra</option>
+        <option>Karnataka</option>
+        <option>Tamil Nadu</option>
+        <option>West Bengal</option>
+      </select>
+
+      <label>Crop</label>
+      <select id="cropSelect">
+        <option value="">Select Crop</option>
+      </select>
+
+      <div class="btn-group">
+        <button class="btn-primary" id="analyzeBtn">Analyze</button>
+        <button class="btn-secondary" id="resetBtn" type="button">Reset</button>
+      </div>
+    </div>
+
+    <!-- SUMMARY -->
+    <div class="card">
+      <h3>Crop Summary</h3>
+      <div id="summaryBox" class="summary-box">
+        Select a crop to view details
+      </div>
+    </div>
+
+  </div>
+
+  <!-- TABLE -->
+  <div class="card calendar-bottom">
+    <h3>Farming Timeline & Alerts</h3>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Activity</th>
+            <th>Season</th>
+            <th>Alert</th>
+          </tr>
+        </thead>
+
+        <tbody id="tableBody">
+          <tr>
+            <td colspan="4">No data selected</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- JS -->
+<script src="{{ url_for('static', filename='js/calendar.js') }}"></script>
+
+</body>
+</html>

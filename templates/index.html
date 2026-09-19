@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CropPilot</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    #home,
+    #features,
+    #about,
+    #reviews,
+    #contact {
+      scroll-margin-top: 100px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <a href="/" class="logo">🌱 CropPilot</a>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="overlay"></div>
+
+    <div class="hero-content" data-aos="fade-up">
+      <h1>Smarter Farming,<br> Higher Profits.</h1>
+      <p>Market Intelligence for modern agriculture</p>
+
+      <a href="#features">
+        <button>Get Started</button>
+      </a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features" id="features">
+
+    <!-- MARKET -->
+    <a href="/market" class="feature-link">
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="50">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
+        <h3>Market Trends</h3>
+        <p>Analyze mandi prices and find the best market to sell your crop.</p>
+      </div>
+    </a>
+
+    <!-- WEATHER / LOCATION -->
+    <a href="/weather_page" class="feature-link">
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="100">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png">
+        <h3>Location-Based Intelligence</h3>
+        <p>Get real-time weather insights for your region.</p>
+      </div>
+    </a>
+
+    <!-- Nutrition -->
+    <a href="/nutrition" class="feature-link">
+  <div class="feature-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/1046/1046784.png">
+    <h3>Crop Nutrition</h3>
+    <p>Know nutrient and food value of crops.</p>
+  </div>
+</a>
+
+    <!-- CALENDAR -->
+    <a href="/calendar" class="feature-link">
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="300">
+        <img src="https://cdn-icons-png.flaticon.com/512/747/747310.png">
+        <h3>Crop Calendar & Alerts</h3>
+        <p>Stay updated with timely alerts.</p>
+      </div>
+    </a>
+
+    <!-- CROP -->
+    <a href="/crop" class="feature-link">
+      <div class="feature-card" data-aos="zoom-in" data-aos-delay="400">
+        <img src="https://cdn-icons-png.flaticon.com/512/4149/4149643.png">
+        <h3>Smart Crop Prediction</h3>
+        <p>Use AI insights to maximize yield.</p>
+      </div>
+    </a>
+
+    <a href="/disease" class="feature-link">
+  <div class="feature-card">
+    <img src="https://cdn-icons-png.flaticon.com/512/619/619034.png">
+    <h3>Plant Disease Detection</h3>
+    <p>Upload crop leaf image and detect disease instantly.</p>
+  </div>
+</a>
+
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="about-img"></div>
+
+    <div class="about-text">
+      <h2>Farming Backed by Data</h2>
+      <p>CropPilot helps farmers move from guesswork to data-driven decisions.</p>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testimonials" id="reviews">
+
+    <div class="testimonial">
+      <p>"My profits increased because I chose the right crops."</p>
+      <h4>- Ramesh</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>"This app removes uncertainty from farming."</p>
+      <h4>- Suresh</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>"The market price feature helped me sell at the right time."</p>
+      <h4>- Mahesh</h4>
+    </div>
+
+    <div class="testimonial">
+      <p>"Crop alerts improved my yield."</p>
+      <h4>- Anil</h4>
+    </div>
+
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Reach out for support or queries.</p>
+    <p>cropiloteam@gmail.com</p>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+  <script>
+    AOS.init();
+
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("navbar");
+
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>

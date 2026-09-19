@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Detection | CropPilot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/disease.css') }}">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">🌱 CropPilot</div>
+        <nav>
+            <a href="/">Home</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTAINER -->
+    <div class="container">
+        <h1>🌿 Plant Disease Detection</h1>
+        <p>Upload or drag & drop a leaf image to detect disease instantly.</p>
+
+        <div class="card">
+
+            <!-- DROP AREA -->
+            <div class="upload-box" id="drop-area">
+                <p>📂 Drag & Drop Image Here</p>
+                <p>or</p>
+
+                <input type="file" id="fileElem" hidden accept="image/*">
+
+                <button type="button" id="chooseBtn">
+                    Choose Image
+                </button>
+            </div>
+
+            <!-- IMAGE PREVIEW -->
+            <img 
+                id="preview" 
+                src="" 
+                alt="Preview"
+                style="display:none; max-width:300px; margin-top:20px; border-radius:10px;"
+            >
+
+            <!-- DETECT BUTTON -->
+            <button id="detectBtn" disabled>
+                Detect Disease
+            </button>
+
+            <!-- LOADING -->
+            <div id="loading" style="display:none; margin-top:15px;">
+                ⏳ Detecting disease...
+            </div>
+
+            <!-- RESULT -->
+            <div id="resultBox" style="display:none;">
+                <h2 id="result"></h2>
+            </div>
+
+            <!-- ERROR -->
+            <div id="errorBox" style="display:none; color:red; margin-top:15px;">
+                <p id="errorText"></p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- External JS -->
+    <script src="{{ url_for('static', filename='js/disease.js') }}"></script>
+
+</body>
+</html>

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Prediction | CropPilot</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #eef2f3, #e6efe9);
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 40px;
+      background: #1b4332;
+      color: white;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* CONTAINER */
+    .container {
+      padding: 60px 10%;
+    }
+
+    h1 {
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #555;
+    }
+
+    /* CARD */
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+      margin-top: 30px;
+    }
+
+    /* GRID */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .grid div {
+      display: flex;
+      flex-direction: column;
+    }
+
+    input {
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+
+    small {
+      font-size: 12px;
+      color: #777;
+      margin-top: 4px;
+    }
+
+    /* BUTTON */
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #3a8d2f, #6bbf59);
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    /* RESULT */
+    .result {
+      margin-top: 25px;
+      font-size: 18px;
+      font-weight: 600;
+      color: #1b4332;
+    }
+
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="/" class="logo">🌱 CropPilot</a>
+    <a href="/">Home</a>
+  </div>
+
+  <div class="container">
+
+    <h1>Crop Recommendation</h1>
+    <p>Enter soil and climate details to get the best crop prediction.</p>
+
+    <div class="card">
+
+      <div class="grid">
+
+        <div>
+          <label>Nitrogen (N)</label>
+          <input id="N" type="number" min="0" max="140">
+          <small>Range: 0 – 140</small>
+        </div>
+
+        <div>
+          <label>Phosphorus (P)</label>
+          <input id="P" type="number" min="5" max="145">
+          <small>Range: 5 – 145</small>
+        </div>
+
+        <div>
+          <label>Potassium (K)</label>
+          <input id="K" type="number" min="5" max="205">
+          <small>Range: 5 – 205</small>
+        </div>
+
+        <div>
+          <label>Temperature (°C)</label>
+          <input id="temperature" type="number" step="0.1" min="8" max="43">
+          <small>Range: 8 – 43 °C</small>
+        </div>
+
+        <div>
+          <label>Humidity (%)</label>
+          <input id="humidity" type="number" step="0.1" min="14" max="100">
+          <small>Range: 14 – 100%</small>
+        </div>
+
+        <div>
+          <label>pH</label>
+          <input id="ph" type="number" step="0.1" min="3.5" max="9.9">
+          <small>Range: 3.5 – 9.9</small>
+        </div>
+
+        <div>
+          <label>Rainfall (mm)</label>
+          <input id="rainfall" type="number" step="0.1" min="20" max="300">
+          <small>Range: 20 – 300 mm</small>
+        </div>
+
+      </div>
+
+      <button onclick="predict()">Predict Crop</button>
+
+      <div id="result" class="result"></div>
+
+    </div>
+
+  </div>
+
+  <!-- SCRIPT -->
+  <script>
+async function predict() {
+
+  const data = {
+    N: parseFloat(document.getElementById("N").value),
+    P: parseFloat(document.getElementById("P").value),
+    K: parseFloat(document.getElementById("K").value),
+    temperature: parseFloat(document.getElementById("temperature").value),
+    humidity: parseFloat(document.getElementById("humidity").value),
+    ph: parseFloat(document.getElementById("ph").value),
+    rainfall: parseFloat(document.getElementById("rainfall").value)
+  };
+
+  // ✅ STRONG VALIDATION
+  for (let key in data) {
+    if (isNaN(data[key])) {
+      document.getElementById("result").innerText = "⚠️ Fill all fields correctly";
+      return;
+    }
+  }
+
+  try {
+    const res = await fetch("/predict", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data)
+    });
+
+    const result = await res.json();
+
+    if (result.error) {
+      document.getElementById("result").innerText = "❌ " + result.error;
+    } else {
+      document.getElementById("result").innerText =
+        "🌾 Recommended Crop: " + result.crop;
+    }
+
+  } catch (err) {
+    document.getElementById("result").innerText = "❌ Server error";
+  }
+}
+</script>
+
+</body>
+</html>

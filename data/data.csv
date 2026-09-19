@@ -1,0 +1,11 @@
+State,District,Market,Commodity,Variety,Grade,Arrival_Date,Min_x0020_Price,Max_x0020_Price,Modal_x0020_Price
+Punjab,Mohali,"Kharar APMC",Onion,Other,Non-FAQ,21/04/2026,1300,2000,1500
+Punjab,Mohali,"Kharar APMC",Tomato,Tomato,Non-FAQ,21/04/2026,1500,3000,2500
+Punjab,Mohali,"Kharar APMC",Capsicum,Capsicum,Local,21/04/2026,1200,1500,1300
+"Uttar Pradesh",Mirzapur,"Ahirora APMC",Wheat,Wheat,Non-FAQ,21/04/2026,2425,2450,2450
+"Uttar Pradesh",Mirzapur,"Ahirora APMC","Bhindi(Ladies Finger)",Bhindi,Medium,21/04/2026,2000,2200,2100
+"Uttar Pradesh",Mirzapur,"Ahirora APMC",Cauliflower,Cauliflower,Medium,21/04/2026,1600,1800,1700
+"Madhya Pradesh",Indore,"Indore(F&V) APMC",Apple,Apple,Local,21/04/2026,4000,12000,9000
+"Madhya Pradesh",Indore,"Indore(F&V) APMC",Ginger(Green),"Green Ginger",Local,21/04/2026,1500,4500,3000
+"Madhya Pradesh",Indore,"Indore(F&V) APMC",Mango,Other,Local,21/04/2026,6000,13000,8000
+"Madhya Pradesh",Indore,"Indore(F&V) APMC",Cabbage,Cabbage,Local,21/04/2026,200,600,400

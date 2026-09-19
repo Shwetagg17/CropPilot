@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Crop Nutrition</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/nutrition.css') }}">
+</head>
+
+<body>
+
+
+ <div class="navbar">
+  <a href="/" class="logo">🌱 CropPilot</a>
+  <a href="/">Home</a>
+</div>
+
+
+<section class="container">
+
+  <h1>Crop Nutrition Intelligence</h1>
+  <p>Select a crop to view its nutrition and usage insights.</p>
+
+  <div class="grid">
+
+    <!-- LEFT CARD -->
+    <div class="card">
+
+      <h3>Select Crop</h3>
+
+      <div class="dropdown">
+        <input type="text" id="cropInput" placeholder="Select Crop" readonly>
+
+        <div class="dropdown-list" id="dropdownList">
+          <div class="item">Rice</div>
+          <div class="item">Wheat</div>
+          <div class="item">Maize</div>
+          <div class="item">Cotton</div>
+          <div class="item">Banana</div>
+          <div class="item">Apple</div>
+          <div class="item">Mango</div>
+          <div class="item">Grapes</div>
+          <div class="item">Chickpea</div>
+          <div class="item">Coffee</div>
+          <div class="item">Jute</div>
+          <div class="item">Coconut</div>
+          <div class="item">Papaya</div>
+          <div class="item">Orange</div>
+          <div class="item">Muskmelon</div>
+          <div class="item">Watermelon</div>
+          <div class="item">Pomegranate</div>
+          <div class="item">Lentil</div>
+          <div class="item">Blackgram</div>
+          <div class="item">Mungbean</div>
+          <div class="item">Mothbeans</div>
+          <div class="item">Pigeonpeas</div>
+          <div class="item">Kidneybeans</div>
+        </div>
+      </div>
+
+      <button onclick="getNutrition()">Analyze</button>
+
+    </div>
+
+    <!-- RIGHT CARD -->
+    <div class="card" id="result">
+      <h3>Crop Summary</h3>
+      <p>Select a crop to view details</p>
+    </div>
+
+  </div>
+
+</section>
+
+<script src="{{ url_for('static', filename='js/nutrition.js') }}"></script>
+
+</body>
+</html>

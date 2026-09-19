@@ -1,0 +1,172 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #eef2f3;
+    min-height: 100vh;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(90deg, #1b5e20, #2e7d32);
+    padding: 15px 40px;
+    color: white;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.navbar nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+/* MAIN */
+.container {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.container h1 {
+    font-size: 32px;
+    color: #1b5e20;
+    margin-bottom: 10px;
+}
+
+.container p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* CARD */
+.card {
+    background: white;
+    width: 90%;
+    max-width: 420px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+/* DRAG & DROP BOX */
+.upload-box {
+    border: 2px dashed #66bb6a;
+    border-radius: 15px;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    background: #f9fff9;
+    transition: 0.3s ease;
+}
+
+.upload-box.dragover {
+    background: #e8f5e9;
+    border-color: #2e7d32;
+}
+
+.upload-box p {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* PREVIEW IMAGE */
+#preview {
+    width: 100%;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 12px;
+    margin: 20px 0;
+    border: 1px solid #ddd;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #66bb6a;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #43a047;
+}
+
+button:disabled {
+    background: #bdbdbd;
+    cursor: not-allowed;
+}
+
+/* LOADING */
+#loading {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ff9800;
+    font-weight: 600;
+}
+
+/* RESULT */
+#resultBox {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f1f8e9;
+    border-radius: 10px;
+}
+
+#result {
+    font-size: 22px;
+    color: #1b5e20;
+    font-weight: bold;
+}
+
+#confidence {
+    margin-top: 8px;
+    color: #333;
+    font-size: 16px;
+}
+
+/* ERROR */
+#errorBox {
+    margin-top: 20px;
+    padding: 12px;
+    background: #ffebee;
+    border-radius: 10px;
+}
+
+#errorText {
+    color: #c62828;
+    font-weight: 500;
+}
+
+/* MOBILE */
+@media(max-width: 500px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .container h1 {
+        font-size: 26px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,152 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #eef2f3, #e6efe9);
+  color: #222;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: #1b4332;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* SECTION */
+.calendar-section {
+  padding: 70px 10%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.calendar-section h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.calendar-subtext {
+  color: #666;
+  margin-bottom: 30px;
+}
+
+/* GRID */
+.calendar-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* CARD */
+.card {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+}
+
+/* INPUT */
+.card label {
+  font-size: 13px;
+  margin-top: 10px;
+  display: block;
+}
+
+.card select {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+/* BUTTONS */
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-primary {
+  flex: 1;
+  padding: 12px;
+  background: linear-gradient(90deg, #3a8d2f, #6bbf59);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  padding: 12px;
+  background: #ddd;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* SUMMARY */
+.summary-box {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* TABLE */
+.calendar-bottom {
+  margin-top: 30px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+.table thead {
+  background: #e8f0ea;
+}
+
+.table th,
+.table td {
+  padding: 12px;
+  font-size: 13px;
+  text-align: left;
+}
+
+.table tr {
+  border-bottom: 1px solid #eee;
+}
+
+/* HIGHLIGHT ROW */
+.table tr[style] {
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .calendar-top {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-section {
+    padding: 50px 6%;
+  }
+}

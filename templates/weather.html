@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Weather Insights | CropPilot</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/weather.css') }}">
+
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="/" class="logo">🌱 CropPilot</a>
+    <a href="/">Home</a>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="container">
+
+    <h1>🌍 Weather Insights</h1>
+    <p class="subtitle">Live weather based on your location</p>
+
+    <!-- STATUS -->
+    <div id="status" class="status">
+      Detecting your location...
+    </div>
+
+    <!-- RESULT CARD -->
+    <div id="weatherBox" class="weather-card">
+      <!-- Weather data will appear here -->
+    </div>
+
+    <!-- DIVIDER -->
+    <div class="divider"></div>
+
+    <!-- MANUAL SEARCH -->
+    <div class="search-box">
+      <input id="cityInput" placeholder="Search another city (Delhi)">
+      <button onclick="getWeatherByCity()">Get Weather</button>
+    </div>
+
+  </div>
+
+  <!-- JS -->
+  <script src="{{ url_for('static', filename='js/weather.js') }}"></script>
+
+</body>
+</html>
